@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openvidu-server-kms-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels: openvidu-server-kms
+  template:
+    metadata:
+      labels:
+        component: openvidu-server-kms
+    spec:
+      containers:
+        - name: openvidu-server
+          image: kernelpanic33/openvidu-server-kms
+          ports:
+            - containerPort: 9091
+              name: openvidu-server-kms-node
+            - containerPort: 4443
+              name: web-node
+            - containerPort: 8888
+              name: openvidu-server-node

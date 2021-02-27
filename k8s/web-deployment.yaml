@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: web
+  template:
+    metadata:
+      labels:
+        component: web
+    spec:
+      containers:
+        - name: web
+          image: kernelpanic33/web
+          ports:
+            - containerPort: 5000
+              name: web-node
+            - containerPort: 4443
+              name: server-node
+  

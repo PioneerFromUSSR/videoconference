@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openvidu-server-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels: openvidu-server
+  template:
+    metadata:
+      labels:
+        component: openvidu-server
+    spec:
+      containers:
+        - name: openvidu-server
+          image: kernelpanic33/openvidu-server
+          ports:
+            - containerPort: 8888
+              name: openvidu-server-node
+            - containerPort: 4443
+              name: web-node
