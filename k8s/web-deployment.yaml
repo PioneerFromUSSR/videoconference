@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: kernelpanic33/web
+          image: pioneerfromussr/web
           ports:
             - containerPort: 5000
               name: web-node

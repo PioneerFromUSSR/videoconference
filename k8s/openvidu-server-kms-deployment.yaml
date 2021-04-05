@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: openvidu-server
-          image: kernelpanic33/openvidu-server-kms
+          image: pioneerfromussr/openvidu-server-kms
           ports:
             - containerPort: 9091
               name: openvidu-server-kms-node

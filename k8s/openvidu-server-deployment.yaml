@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: openvidu-server
-          image: kernelpanic33/openvidu-server
+          image: pioneerfromussr/openvidu-server
           ports:
             - containerPort: 8888
               name: openvidu-server-node
